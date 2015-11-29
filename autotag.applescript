@@ -43,6 +43,15 @@
 	look for "addressees only" in the name, which will scan the to:
 	recipients, but not the cc: recipients. The priority is sender, recipients, addressees.
 	If a rule name contains more than one of these keywords, only the first priority one takes effect.
+	
+	At the end it adds OmniFocus task with first keyword as context (OF can have only one context). @Waiting tag is omitted.
+	
+	 Your workflow is like this:
+	 - write email to smb
+	 - assign @Waiting tag by 
+	 - send
+	 - Mail Act-on plugin runs a rule on Sent folder whitch runs this script
+	 - as a result custom contact tags are added and OmniFocus task with same tag is created
 *)
 
 property autoTagTrigger : "autotag:" --text for tag trigger in notes and group names
